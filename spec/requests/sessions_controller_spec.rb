@@ -22,4 +22,18 @@ RSpec.describe "Sessions", type: :request do
             end
         end
     end
+
+    describe 'POST /users/sign_out' do
+        let(:user) { create(:user) }
+
+        before do
+            sign_in user 
+            delete '/users/sign_out'
+        end
+
+        it 'deletes a user session' do
+            expect(response).to have_http_status(:ok)
+            expect(json['status']['message']).to include("Logged out successfully.")
+        end
+    end
 end

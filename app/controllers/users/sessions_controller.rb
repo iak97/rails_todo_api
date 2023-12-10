@@ -8,4 +8,10 @@ class Users::SessionsController < Devise::SessionsController
       status: { code: 200, message: 'Logged in successfully.' },
     }, status: :ok
   end
+
+  def respond_to_on_destroy
+    render json: {
+      status: { code: 200, message: 'Logged out successfully.' },
+    }, status: :ok
+  end
 end
