@@ -1,4 +1,4 @@
-#./spec/requests/registrations_controller_spec.rb
+#./spec/requests/registrations_spec.rb
 require 'rails_helper'
 
 RSpec.describe "Registrations", type: :request do
