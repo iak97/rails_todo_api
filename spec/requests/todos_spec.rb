@@ -56,4 +56,27 @@ RSpec.describe "Todos", type: :request do
       end
     end
   end
+
+  describe "POST /todos" do
+    let(:todo) { build(:todo) }
+
+    context 'when the request is valid' do
+      before { post '/todos', params: { todo: { title: todo.title, status: todo.status } } }
+
+      it 'creates a todo' do
+        expect(response).to have_http_status(:created)
+
+        expect(json['title']).to eq(todo.title)
+        expect(json['status']).to eq(todo.status)
+      end
+    end
+
+    context 'when the request is not valid' do
+      before { post '/todos', params: { todo: { title: todo.title, status: nil } } }
+
+      it 'does not create a new todo' do
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
+    end
+  end
 end
