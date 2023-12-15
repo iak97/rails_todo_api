@@ -52,7 +52,7 @@ RSpec.describe "Todos", type: :request do
       it 'returns a not found message' do
         expect(response).to have_http_status(:not_found)
 
-        expect(response.body).to match(/Couldn't find Todo/)
+        expect(response.body).to include("Couldn't find Todo")
       end
     end
   end
@@ -76,7 +76,12 @@ RSpec.describe "Todos", type: :request do
 
       it 'does not create a new todo' do
         expect(response).to have_http_status(:unprocessable_entity)
+
+        expect(json['status']).to include("can't be blank")
       end
     end
+  end
+
+  describe "PUT /todos/:id" do
   end
 end
