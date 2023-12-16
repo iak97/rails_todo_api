@@ -20,7 +20,7 @@ RSpec.describe "Registrations", type: :request do
 
             it 'does not create a new user' do
                 expect(response).to have_http_status(:unprocessable_entity)
-                expect(json['status']['message']).to include("User couldn't be created successfully.")
+                expect(json['status']['message']).to include("User couldn't be created successfully. Password confirmation doesn't match Password")
             end
         end
     end
