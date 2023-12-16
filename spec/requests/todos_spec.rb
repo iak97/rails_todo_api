@@ -83,5 +83,61 @@ RSpec.describe "Todos", type: :request do
   end
 
   describe "PUT /todos/:id" do
+    let(:todo) { build(:todo) }
+
+    context 'when the record exists and valid' do
+      before { put "/todos/#{todo_id}", params: { todo: { title: todo.title, status: todo.status } } }
+      
+      it 'updates the record' do
+        expect(response).to have_http_status(:ok)
+
+        expect(json['title']).to eq(todo.title)
+        expect(json['status']).to eq(todo.status)
+      end
+    end
+
+    context 'when the record does not exist' do
+      let(:todo_id) { 1000 }
+      
+      before { put "/todos/#{todo_id}", params: { todo: { title: todo.title, status: todo.status } } }
+      
+      it 'returns a not found message' do
+        expect(response).to have_http_status(:not_found)
+
+        expect(response.body).to include("Couldn't find Todo")
+      end
+    end
+
+    context 'when the record exists and not valid' do
+      before { put "/todos/#{todo_id}", params: { todo: { title: nil, status: todo.status } } }
+
+      it 'does not update the record' do
+        expect(response).to have_http_status(:unprocessable_entity)
+
+        expect(json['title']).to include("can't be blank")
+      end
+    end
+  end
+
+  describe "DELETE /todos/:id" do
+    context 'when the record exist' do
+      before { delete "/todos/#{todo_id}" }
+
+      it 'deletes the todo' do
+        expect(response).to have_http_status(:no_content)
+      end
+    end
+
+    context 'when the record does not exist' do
+      let(:todo_id) { 1000 }
+      
+      before { delete "/todos/#{todo_id}" }
+
+      it 'returns a not found message' do
+        expect(response).to have_http_status(:not_found)
+
+        expect(response.body).to include("Couldn't find Todo")
+      end
+    end
   end
 end

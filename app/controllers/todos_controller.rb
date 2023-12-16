@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
     before_action :authenticate_user!
-    before_action :set_todo, only: %i[ show ]
+    before_action :set_todo, only: %i[ show update destroy ]
 
     # GET /todos
     def index
@@ -23,6 +23,20 @@ class TodosController < ApplicationController
         else
             render json: @todo.errors, status: :unprocessable_entity
         end
+    end
+
+    # PATCH/PUT /todos/1
+    def update
+        if @todo.update(todo_params)
+            render json: @todo
+        else
+            render json: @todo.errors, status: :unprocessable_entity
+        end
+    end
+
+    # DELETE /todos/1
+    def destroy
+        @todo.destroy
     end
 
     private
