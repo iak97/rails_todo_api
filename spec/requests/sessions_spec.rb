@@ -19,6 +19,7 @@ RSpec.describe "Sessions", type: :request do
 
             it 'does not create a user session' do
                 expect(response).to have_http_status(:unauthorized)
+                expect(response.body).to include("Invalid Email or password.")
             end
         end
     end
