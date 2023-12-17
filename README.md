@@ -31,7 +31,7 @@ cd rails_todo_api
 bundle install
 ```
 
-## 4. Edit the `config/database.yml` file with your database credentials 💾.
+## 4. Edit `config/database.yml` file with your db credentials 💾.
 
 ## 5. Create the database and run the migrations 🏃:
 
@@ -51,7 +51,7 @@ rails s
 rspec
 ```
 
-## 8. You can now access the API in your Postman 🌐 at [http://localhost:3000](http://localhost:3000).
+## 8. Access the API in your Postman 🌐 at [http://localhost:3000](http://localhost:3000).
 
 ## Note
 
