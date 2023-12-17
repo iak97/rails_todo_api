@@ -51,7 +51,7 @@ rails s
 rspec
 ```
 
-8. You can now access the site in your web browser at [http://localhost:3000](http://localhost:3000).
+8. You can now access the site in your web browser 🌐 at [http://localhost:3000](http://localhost:3000).
 
 ## Note
 
