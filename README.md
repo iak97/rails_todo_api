@@ -25,7 +25,7 @@ git clone git@github.com:iak97/rails_todo_api.git
 cd rails_todo_api
 ```
 
-3. Install the required gems 🔮:
+## 3. Install the required gems 🔮:
 
 ```bash
 bundle install
