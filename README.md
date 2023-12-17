@@ -13,13 +13,13 @@ Before cloning this repository, please ensure that you have the following instal
 
 To get started with the project, follow these steps:
 
-1. Clone the repository:
+## 1. Clone the repository 📂:
 
 ```bash
 git clone git@github.com:iak97/rails_todo_api.git
 ```
 
-2. Change into the project directory ↪️ :
+## 2. Change into the project directory ↪️ :
 
 ```bash
 cd rails_todo_api
@@ -31,28 +31,28 @@ cd rails_todo_api
 bundle install
 ```
 
-4. Edit the `config/database.yml` file with your database credentials.
+## 4. Edit the `config/database.yml` file with your database credentials 💾.
 
-5. Create the database and run the migrations 🏃:
+## 5. Create the database and run the migrations 🏃:
 
 ```bash
 rails db:create db:migrate
 ```
 
-6. Start the Rails server 🚀:
+## 6. Start the Rails server 🚀:
 
 ```bash
 rails s
 ```
 
-7. To run specs 💡:
+## 7. To run specs 💡:
 
 ```bash
 rspec
 ```
 
-8. You can now access the API in your Postman 🌐 at [http://localhost:3000](http://localhost:3000).
+## 8. You can now access the API in your Postman 🌐 at [http://localhost:3000](http://localhost:3000).
 
 ## Note
 
-If you encounter any issues please let me know. Give me a ⭐ if you like this project!!!
+If you encounter any issues please let me know. Give me a 🌟 if you like this project!!!
