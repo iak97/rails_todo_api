@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-12-16T20:04:00+05:30">2023-12-16T20:04:00+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-12-17T11:51:08+05:30">2023-12-17T11:51:08+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  99.22%
+  99.23%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.62
+         2.61
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>258</b> relevant lines,
-    <span class="green"><b>256</b> lines covered</span> and
+    <b>259</b> relevant lines,
+    <span class="green"><b>257</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed. </span>
     (<span class="green">
-  99.22%
+  99.23%
 </span>
 )
   </div>
@@ -264,18 +264,18 @@
             <td class="cell--number">5</td>
             <td class="cell--number">5</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">16.80</td>
+            <td class="cell--number">16.40</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#63976074aa4adbf088b2510ff4fb0a9f06f7f072" class="src_link" title="spec/models/user_spec.rb">spec/models/user_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">30</td>
-            <td class="cell--number">18</td>
-            <td class="cell--number">18</td>
+            <td class="cell--number">32</td>
+            <td class="cell--number">19</td>
+            <td class="cell--number">19</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">1.05</td>
             
           </tr>
         
@@ -1725,7 +1725,7 @@
 
             
 
-            <code class="ruby">    message: &#39;password must be 8 chars long, must contain at least one digit, one special character, one uppercase&#39; }</code>
+            <code class="ruby">    message: &#39;password must be 8 chars long, must contain at least one digit, one special character, one uppercase letter&#39; }</code>
           </li>
         </div>
       
@@ -7494,8 +7494,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="26" data-linenumber="4">
-            <span class="hits">26</span>
+          <li class="covered" data-hits="25" data-linenumber="4">
+            <span class="hits">25</span>
             
 
             
@@ -7505,8 +7505,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="26" data-linenumber="5">
-            <span class="hits">26</span>
+          <li class="covered" data-hits="25" data-linenumber="5">
+            <span class="hits">25</span>
             
 
             
@@ -7556,8 +7556,8 @@
     
 
     <div class="t-line-summary">
-      <b>18</b> relevant lines.
-      <span class="green"><b>18</b> lines covered</span> and
+      <b>19</b> relevant lines.
+      <span class="green"><b>19</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -7613,24 +7613,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="5">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    it &quot;is valid with valid attributes&quot; do</code>
+            <code class="ruby">    let(:valid_attributes) { { password: &#39;Pass@1234&#39;, password_confirmation: &#39;Pass@1234&#39; } }</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="6">
+            
             
 
             
 
-            <code class="ruby">      user = build(:user)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -7641,12 +7641,34 @@
 
             
 
+            <code class="ruby">    it &quot;is valid with valid attributes&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      user = build(:user, valid_attributes)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">      expect(user).to be_valid</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -7657,35 +7679,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &quot;is atleast 8 characters present&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      user = build(:user, password: &#39;Pass@12&#39;, password_confirmation: &#39;Password@12&#39;)</code>
           </li>
         </div>
       
@@ -7696,12 +7696,34 @@
 
             
 
+            <code class="ruby">    it &quot;requires at least 8 characters&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      user = build(:user, password: &#39;Pass@12&#39;, password_confirmation: &#39;Password@12&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">      expect(user).not_to be_valid</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="15">
             
             
 
@@ -7712,35 +7734,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &quot;is atleast one uppercase present&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      user = build(:user, password: &#39;pass@123&#39;, password_confirmation: &#39;pass@123&#39;)</code>
           </li>
         </div>
       
@@ -7751,12 +7751,34 @@
 
             
 
+            <code class="ruby">    it &quot;requires at least one uppercase letter&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      user = build(:user, password: &#39;pass@123&#39;, password_confirmation: &#39;pass@123&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">      expect(user).not_to be_valid</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 
@@ -7767,35 +7789,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="20">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it &quot;is atleast one special character present&quot; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      user = build(:user, password: &#39;Pass1234&#39;, password_confirmation: &#39;Pass1234&#39;)</code>
           </li>
         </div>
       
@@ -7806,12 +7806,34 @@
 
             
 
+            <code class="ruby">    it &quot;requires at least one special character&quot; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="23">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      user = build(:user, password: &#39;Pass1234&#39;, password_confirmation: &#39;Pass1234&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">      expect(user).not_to be_valid</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="25">
             
             
 
@@ -7822,7 +7844,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="24">
+          <li class="never" data-hits="" data-linenumber="26">
             
             
 
@@ -7833,18 +7855,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="25">
+          <li class="covered" data-hits="1" data-linenumber="27">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    it &quot;is atleast one number present&quot; do</code>
+            <code class="ruby">    it &quot;requires at least one number&quot; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="26">
+          <li class="covered" data-hits="1" data-linenumber="28">
             <span class="hits">1</span>
             
 
@@ -7855,7 +7877,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
+          <li class="covered" data-hits="1" data-linenumber="29">
             <span class="hits">1</span>
             
 
@@ -7866,7 +7888,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
@@ -7877,7 +7899,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
@@ -7888,7 +7910,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="30">
+          <li class="never" data-hits="" data-linenumber="32">
             
             
 

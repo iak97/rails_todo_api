@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :todos
   validates :password, format: { with: /\A(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[[:^alnum:]])/x,
-    message: 'password must be 8 chars long, must contain at least one digit, one special character, one uppercase' }
+    message: 'password must be 8 chars long, must contain at least one digit, one special character, one uppercase letter' }
 end
