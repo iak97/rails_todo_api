@@ -10,16 +10,19 @@ RSpec.describe Todo, type: :model do
     it "is not valid without a title" do
       todo = build(:todo, title: nil)
       expect(todo).not_to be_valid
+      expect(todo.errors[:title]).to include("can't be blank")
     end
 
     it "is not valid without a status" do
       todo = build(:todo, status: nil)
       expect(todo).not_to be_valid
+      expect(todo.errors[:status]).to include("can't be blank")
     end
 
     it "is not valid without a user" do
       todo = build(:todo, user: nil)
       expect(todo).not_to be_valid
+      expect(todo.errors[:user]).to include("must exist")
     end
   end
 end
