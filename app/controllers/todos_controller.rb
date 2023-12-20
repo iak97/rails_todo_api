@@ -42,7 +42,8 @@ class TodosController < ApplicationController
     private
 
       def set_todo
-        @todo = Todo.find(params[:id])
+        @todo = Todo.find_by(id: params[:id], user_id: current_user.id)
+        render json: { error: "Couldn't find Todo" }, status: :not_found unless @todo
       end
 
       def todo_params
