@@ -38,6 +38,9 @@ RSpec.describe "Todos", type: :request do
         expect(response).to have_http_status(:ok)
         expect(json).not_to be_empty
         expect(json['id']).to eq(todo_id)
+        expect(json['title']).to eq(todos.last.title)
+        expect(json['status']).to eq(todos.last.status)
+        expect(json['user_id']).to eq(todos.last.user_id)
       end
     end
 
